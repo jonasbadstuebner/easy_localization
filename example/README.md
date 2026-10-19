@@ -113,11 +113,7 @@ class MyApp extends StatelessWidget {
     log( Intl.defaultLocale.toString(), name: this.toString()+"# Intl.defaultLocale" );
     return MaterialApp(
       title: 'Flutter Demo',
-      localizationsDelegates: [
-        GlobalMaterialLocalizations.delegate,
-        GlobalWidgetsLocalizations.delegate,
-        EasyLocalization.of(context).delegate,
-      ],
+      localizationsDelegates: EasyLocalization.of(context).localizationDelegates,
       supportedLocales: EasyLocalization.of(context).supportedLocales,
       locale: EasyLocalization.of(context).locale,
       theme: ThemeData(
